@@ -44,6 +44,10 @@ export default function Sidebar() {
 
 If you want to implement aliases for custom breakpoints and get IDE type snippets:
 
+Fork this project and edit the `index.d.ts` file
+or...
+if you don't look for the easy way out:
+
 Create `IStylesCustom.d.ts` file:
 
 ```ts

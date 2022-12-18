@@ -1,6 +1,6 @@
 {
   "name": "tailwind-styler",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Provides simple separations for tailwind styles for different device screens",
   "author": "Max Shane <wellloy1@gmail.com>",
   "keywords": [
