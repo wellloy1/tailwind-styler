@@ -1,0 +1,23 @@
+{
+  "name": "tailwind-styler",
+  "version": "1.0.0",
+  "description": "Provides simple separations for tailwind styles for different device screens",
+  "author": "Max Shane <wellloy1@gmail.com>",
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "screens css",
+    "screens styler"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wellloy1/tailwind-styler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wellloy1/tailwind-styler/issues",
+    "email": "wellloy1@gmail.com"
+  },
+  "main": "index.js",
+  "type": "module",
+  "types": "index.d.ts"
+}
