@@ -1,10 +1,16 @@
 # Description
 
-Provides simple separations for tailwind styles for different device screens
+Provides simple separations for tailwind styles for different device screens.
 You don't need to write screen prefixes for tailwind classes.  
 Just describe styles for components inside of the screen alias in the styles object and pass it to the "tailwind-styler" function.  
 It will generate a string with tailwind classes.
 All duplicates will be removed (the last repetition will rewrite the previous one).
+
+# Usage
+
+```bash
+npm i tailwind-styler
+```
 
 # Example
 
