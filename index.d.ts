@@ -1,10 +1,5 @@
 interface IStyles {
-  all?: string;
-  md?: string;
-  sm?: string;
-  lg?: string;
-  xl?: string;
-  xxl?: string;
+  [index: string]: string;
 }
 
 declare function Styler(styles: IStyles): string;

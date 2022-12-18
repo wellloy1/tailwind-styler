@@ -17,17 +17,19 @@ npm i tailwind-styler
 With React .tsx component
 
 ```ts
-import Styler, { IStyles } from "tailwind-styler";
+import Styler from "tailwind-styler";
 
-const styles: IStyles = {
+const styles = {
   // "All" means: for all screens
   all: "bg-gray-600",
   sm: "hidden",
   md: "flex w-64 flex-col fixed inset-y-0",
-  // Also available:
-  // lg?: string
-  // xl?: string
-  // xxl?: string *it generates a "2xl" prefix
+  // Also you can use custom aliases:
+  mobile: "hidden",
+  //
+  // These keys are reserved:
+  // "all", "md", "sm", "lg", "xl", "xxl"
+  // *xxl - will generates a "2xl" prefix
 };
 
 const style = Styler(styles);
@@ -37,5 +39,5 @@ export default function Sidebar() {
 }
 
 // That jsx produces classes:
-// "bg-gray-600 sm:hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0"
+// "bg-gray-600 sm:hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0 mobile:hidden"
 ```

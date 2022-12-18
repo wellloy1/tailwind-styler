@@ -1,9 +1,6 @@
 function Styler(styles) {
-  const reservedKeys = ["all", "md", "sm", "lg", "xl", "xxl"];
   const stylesMap = {};
   for (const screen in styles) {
-    if (!reservedKeys.includes(screen)) continue;
-
     const screenStylesArray = styles[screen]
       .split(" ")
       .map((item) => item.trim());
