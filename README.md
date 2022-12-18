@@ -12,14 +12,14 @@ All duplicates will be removed (the last repetition will rewrite the previous on
 npm i tailwind-styler
 ```
 
-# Example
+## Example
 
 With React .tsx component
 
 ```ts
 import Styler from "tailwind-styler";
 
-const styles = {
+const style = Styler({
   // "All" means: for all screens
   all: "bg-gray-600",
   sm: "hidden",
@@ -30,9 +30,7 @@ const styles = {
   // These keys are reserved:
   // "all", "md", "sm", "lg", "xl", "xxl"
   // *xxl - will generates a "2xl" prefix
-};
-
-const style = Styler(styles);
+});
 
 export default function Sidebar() {
   return <div className={style}>Sidebar</div>;
@@ -40,4 +38,34 @@ export default function Sidebar() {
 
 // That jsx produces classes:
 // "bg-gray-600 sm:hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0 mobile:hidden"
+```
+
+## Another example
+
+If you want to implement aliases for custom breakpoints and get IDE type snippets:
+
+Create `IStylesCustom.d.ts` file:
+
+```ts
+import { IStyles, IStylesDefault } from "tailwind-styler";
+
+type IStylesCustom = IStyles & {
+  mobile?: string;
+};
+// Or use "IStylesDefault" if you want to include default alias snippets like "md", "lg", etc.
+
+export default IStylesCustom;
+```
+
+And use it in your component file:
+
+```ts
+import Styler from "tailwind-styler";
+import IStylesCustom from "./somepath";
+
+const styles: IStylesCustom = {
+  mobile: "hidden",
+};
+
+const elementStyle = Styler(styles);
 ```
